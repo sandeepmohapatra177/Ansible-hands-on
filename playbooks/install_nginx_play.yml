@@ -1,0 +1,16 @@
+-
+  name: install_nginx_start
+  hosts: prod
+  become: yes
+  tasks:
+    - name: install_nginx
+      apt:
+        name: nginx
+        state: latest
+
+    - name: start-nginx
+      service:
+        name: nginx
+        state: started
+        enabled: yes
+

@@ -1,0 +1,7 @@
+-
+
+ name: disk-space
+ hosts: servers
+ tasks:
+   - name: give_disk_usage
+     command: df -h
